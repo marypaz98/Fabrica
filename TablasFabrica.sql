@@ -233,6 +233,7 @@ CREATE TABLE [dbo].[Automovil](
 	[placa] [varchar](20) NOT NULL,
 	[precioBase] [money] NOT NULL,
 	[consignacion] [bit] NOT NULL,
+	[anno] [int] NOT NULL
  CONSTRAINT [PK_Automovil] PRIMARY KEY CLUSTERED 
 (
 	[idAutomovil] ASC
