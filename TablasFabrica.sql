@@ -396,15 +396,35 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[ClienteUbicacion](
-	[idClienteUbicacion] [int] IDENTITY(1,1) NOT NULL,
+	[idCliente] [int] IDENTITY(1,1) NOT NULL,
 	[ubicacion] [geometry] NOT NULL,
  CONSTRAINT [PK_ClienteUbicacion] PRIMARY KEY CLUSTERED 
 (
-	[idClienteUbicacion] ASC
+	[idCliente] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
 
+USE [Fabrica]
+GO
+
+/****** Object:  Table [dbo].[Cliente]    Script Date: 9/6/2019 11:25:34 p. m. ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ClienteCredenciales](
+	[idCliente] [int] IDENTITY(1,1) NOT NULL,
+	[usuario] [varchar] (80) NOT NULL,
+	[contraseña] [varchar] (80) NOT NULL
+ CONSTRAINT [PK_ClienteCredenciales] PRIMARY KEY CLUSTERED 
+(
+	[idCliente] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
 USE [Fabrica]
 GO
 
