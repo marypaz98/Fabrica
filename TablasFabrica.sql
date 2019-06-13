@@ -398,6 +398,8 @@ GO
 
 CREATE TABLE [dbo].[ClienteUbicacion](
 	[idCliente] [int] IDENTITY(1,1) NOT NULL,
+	[usuario] [varchar] (20) NOT NULL,
+	[contrasenna] [varchar] (20) NOT NULL,
 	[ubicacion] [geometry] NOT NULL,
  CONSTRAINT [PK_ClienteUbicacion] PRIMARY KEY CLUSTERED 
 (
