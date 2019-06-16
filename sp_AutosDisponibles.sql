@@ -38,11 +38,9 @@ BEGIN
 	where idAutomovil=@idAutomovil
 END
 go
-create procedure verExtrasAutosDisponibles(@idAutomovil int)
+create procedure verExtrasAutosDisponibles()
 as
 BEGIN
 	Select nombre, precio
-	from ExtraxAutomovil EX 
-	inner join Extra E on E.idExtra= EX.idExtra
-	where idAutomovil=@idAutomovil
+	from Extra 
 END
